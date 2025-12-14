@@ -18,7 +18,7 @@ st.caption("Sumber data: Tabel Fakta hasil ETL Pentaho Data Integration")
 @st.cache_data
 def load_data():
     df = pd.read_csv(
-        "fact_olist_clean.csv",
+        "fact_olist.csv",
         engine="python"
     )
     df.columns = df.columns.str.strip()
@@ -120,4 +120,5 @@ st.bar_chart(payment)
 # =====================
 st.subheader("Tabel Fakta (Detail Data)")
 st.dataframe(df_f)
+
 
